@@ -6,7 +6,9 @@
 # author: pdifranc
 # description: generate plots for revision in IEEE Transaction on Big Data
 
-import numpy as np,pandas as pd,matplotlib,matplotlib.pyplot as plt
+import numpy as np,pandas as pd,matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import shapefile
 from matplotlib.patches import Polygon
