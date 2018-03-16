@@ -25,15 +25,37 @@ Python class to generate all plots in the paper
 This file needs all the adjacencies and points file generate
 by Points and Adjacency.
 
-3) run.py
+*************
 
-Create all databases, i.e. all points files, all adjacency files,
-and creates all plots.
+Replicate the results and plots
+
+create a virtual env for python 2.7, e.g. with conda
+<code>
+conda create --name tbd python=2.7
+source actiave tbd
+</code>
+
+install the dependencies
 
 <code>
-> chmod +x run.py
-> ./run.py
+pip install -r requirements.txt
 </code>
+
+install the lib with pip
+
+<code>
+pip install .
+</code>
+
+in the ipython console:
+
+<code>
+[1] import tbd
+[2] tbd.run()
+</code>
+
+wait until it completes
+
 
 *Benchmarking Results*
 
