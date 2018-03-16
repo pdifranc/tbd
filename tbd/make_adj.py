@@ -5,6 +5,8 @@
 # description: mobile network planning adjacency file IEEE Transaction of Big Data
 
 import numpy as np, pandas as pd
+from tqdm import tqdm
+
 import argparse as ap
 
 all_sectors = set()
@@ -329,8 +331,7 @@ class Adjacency():
 
   def run(self):
     df_list = []
-    for index, row in self.bs.iterrows():
-      print index
+    for index, row in tqdm(self.bs.iterrows(), total=self.bs.shape[0]):
       for point_type in self.types:
         bs_id = row.bs_id
         bs_lat, bs_long, bs_power = row.bs_lat, row.bs_long, row.bs_power
